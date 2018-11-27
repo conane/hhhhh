@@ -34,7 +34,7 @@ client.on('message', message => {
     }
 });
 
-module.exports.run = async (bot, message, args) => {
+client.on('message', message => {
    if(!message.member.hasPermission("MANAG_MESSAGES")) return message.replay("No");
    let botmessage = args.join(" ");
    message.delet().catch();
