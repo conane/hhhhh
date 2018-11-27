@@ -34,16 +34,6 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
-   if(!message.member.hasPermission("MANAG_MESSAGES")) return message.replay("No");
-   let botmessage = args.join(" ");
-   message.delet().catch();
-   message.channel.send(botmessage);
-}
-
-module.exports.help = {
-   name: "say"
-}
 
 client2.on('message', message => {
     if(message.content === '-راتب'){
